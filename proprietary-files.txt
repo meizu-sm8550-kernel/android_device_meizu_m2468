@@ -2085,3 +2085,36 @@ vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib64/vendor.xingji.hal.starCore@1.0.so
 vendor/lib64/vendor.xingji.hal.starCore@1.1.so
 vendor/lib64/vendor.xingji.hardware.qsee.store@1.0.so
+
+# Kalama counterparts of m2481 pineapple entries, from the m2468 stock dump
+# Configs and scripts already installed by device.mk/init/Android.bp are omitted.
+
+# ACDB (Kalama)
+vendor/etc/acdbdata/kalama_cdp/CDP_acdb_cal.acdb
+vendor/etc/acdbdata/kalama_cdp/CDP_workspaceFileXml.qwsp
+vendor/etc/acdbdata/kalama_mtp/MTP_acdb_cal.acdb
+vendor/etc/acdbdata/kalama_mtp/MTP_workspaceFileXml.qwsp
+vendor/etc/acdbdata/kalama_qrd/QRD_acdb_cal.acdb
+vendor/etc/acdbdata/kalama_qrd/QRD_workspaceFileXml.qwsp
+
+# Audio (Kalama)
+vendor/etc/audio/sku_kalama/MicSealingTest.wav
+vendor/etc/audio/sku_kalama/RecNoise.wav
+vendor/etc/audio/sku_kalama/factory_test.wav
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
+vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
+vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
+vendor/etc/audio/sku_kalama/silent-3sec.wav
+vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
+
+# Factory audio (Kalama)
+vendor/etc/ftm_test_config_kalama-qrd-snd-card
+
+# Kernel post-boot branches called by the source-installed Kalama dispatcher
+vendor/bin/init.kernel.post_boot-kalama_3_2_1.sh
+vendor/bin/init.kernel.post_boot-kalama_3_4_0.sh
+vendor/bin/init.kernel.post_boot-kalama_default_3_4_1.sh
