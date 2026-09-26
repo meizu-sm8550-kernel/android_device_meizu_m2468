@@ -51,7 +51,6 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/etc/kvh2xml.xml
 vendor/etc/misound_asc_model.tflite
 vendor/lib64/libPeripheralStateUtils.so
 vendor/lib64/lib_misound_asc.so
@@ -194,9 +193,7 @@ vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
 vendor/etc/init/qvrd_vndr.rc
-vendor/etc/permissions/camera_extensions.xml
 vendor/etc/seccomp_policy/qvr@2.0.policy
-vendor/framework/androidx.camera.extensions.impl.jar
 vendor/lib64/libDspIOProxy_stub.so
 vendor/lib64/libMapService.so
 vendor/lib64/libc++_shared.so
@@ -817,11 +814,8 @@ vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/etc/libnfc-SN220_19_2MHZ.conf
 vendor/etc/libnfc-SN220_38_4MHZ.conf
 vendor/etc/libnfc-hal-st-519_mtp.conf
-vendor/etc/libnfc-hal-st-ishtar.conf
 vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-mtp-SN100.conf
-vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
-vendor/etc/libnfc-nxp-pnscr.conf
 vendor/etc/libnfc-qrd-SN100.conf
 vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
 vendor/etc/st54j_conf.txt
@@ -859,7 +853,6 @@ vendor/etc/perf/avcsysnodesconfigs.xml
 vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/commonsysnodesconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/perfboostselection.xml
 vendor/etc/perf/perfconfigstore.xml
 vendor/etc/perf/targetavcsysnodesconfigs.xml
 vendor/etc/perf/targetconfig.xml
@@ -867,8 +860,6 @@ vendor/etc/perf/targetresourceconfigs.xml
 vendor/etc/perf/targetsysnodesconfigs.xml
 vendor/etc/perf/testcommonresourceconfigs.xml
 vendor/etc/perf/testtargetresourceconfigs.xml
-vendor/etc/perf/thermal-boost.conf
-vendor/etc/perf/thermalbreakboostconfig.xml
 vendor/etc/pwr/AODPowerOptFeature.xml
 vendor/etc/pwr/PSMPowerOptFeature.xml
 vendor/etc/pwr/PowerFeatureConfig.xml
@@ -1011,13 +1002,12 @@ vendor/bin/qms
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
 vendor/etc/init/qcrilNrd.rc
-vendor/etc/modem/Diag.cfg
-vendor/etc/modem/Diag_data.cfg
-vendor/etc/modem/Diag_default.cfg
-vendor/etc/modem/Diag_global.cfg
-vendor/etc/modem/Diag_ims.cfg
-vendor/etc/modem/network_scan_config.cfg
-vendor/etc/modem/power.cfg
+vendor/etc/scLog/Diag_pmic.cfg
+vendor/etc/scLog/diag_audio.cfg
+vendor/etc/scLog/Diag_modem.cfg
+vendor/etc/scLog/Diag_sensor.cfg
+vendor/etc/scLog/Diag_audio_pmic.cfg
+vendor/etc/scLog/Diag_seensor_pmic.cfg
 vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
