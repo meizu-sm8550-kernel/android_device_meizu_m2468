@@ -842,7 +842,7 @@ vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.tms.tmsnfc@1.0.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 vendor/lib64/tms-utils.so
-vendor/lib64/tms-cos-dl.ree.so
+vendor/lib64/tms-cos-dl-ree.so
 vendor/lib64/tms-cos-dl-common.so
 vendor/lib64/nfc_nci.thn31nfc.tms.so
 
