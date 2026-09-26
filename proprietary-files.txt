@@ -48,15 +48,6 @@ vendor/lib/rfsa/adsp/nearby.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio
-odm/etc/audio/hrtf5c.bin
-odm/etc/audio/misound_karaoke_res.bin
-odm/etc/audio/misound_karaokemix_res.bin
-odm/etc/audio/misound_res_headphone.bin
-odm/etc/audio/misound_res_spk.bin
-odm/etc/audio/misound_res_spk4ch.bin
-odm/etc/init/init.cirrus.rc
-odm/etc/backend_conf.xml
-odm/lib64/libaudioroute_ext.so
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
@@ -203,9 +194,9 @@ vendor/lib64/vendor.qti.latency@2.1.so
 vendor/lib64/vendor.qti.latency@2.2.so
 
 # Camera
-odm/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
-odm/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
-odm/etc/vintf/manifest/vendor.qti.camera.provider.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl-1.3.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
 vendor/etc/camera/placeholder_camera.txt
 vendor/etc/init/init.hwinfo.rc
 vendor/etc/init/qvrd_vndr.rc
@@ -373,8 +364,6 @@ vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Display (SDM)
-odm/lib64/libmiClstc.so
-odm/lib64/libmiXmlParser.so
 vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU720.xml
@@ -462,28 +451,28 @@ vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
 
 # EVA firmware
-odm/firmware/evass.b00
-odm/firmware/evass.b01
-odm/firmware/evass.b02
-odm/firmware/evass.b03
-odm/firmware/evass.b04
-odm/firmware/evass.b05
-odm/firmware/evass.b06
-odm/firmware/evass.b07
-odm/firmware/evass.b08
-odm/firmware/evass.b09
-odm/firmware/evass.b10
-odm/firmware/evass.b11
-odm/firmware/evass.b12
-odm/firmware/evass.b13
-odm/firmware/evass.b14
-odm/firmware/evass.b15
-odm/firmware/evass.b16
-odm/firmware/evass.b17
-odm/firmware/evass.b18
-odm/firmware/evass.b19
-odm/firmware/evass.mbn
-odm/firmware/evass.mdt
+vendor/firmware/evass.b00
+vendor/firmware/evass.b01
+vendor/firmware/evass.b02
+vendor/firmware/evass.b03
+vendor/firmware/evass.b04
+vendor/firmware/evass.b05
+vendor/firmware/evass.b06
+vendor/firmware/evass.b07
+vendor/firmware/evass.b08
+vendor/firmware/evass.b09
+vendor/firmware/evass.b10
+vendor/firmware/evass.b11
+vendor/firmware/evass.b12
+vendor/firmware/evass.b13
+vendor/firmware/evass.b14
+vendor/firmware/evass.b15
+vendor/firmware/evass.b16
+vendor/firmware/evass.b17
+vendor/firmware/evass.b18
+vendor/firmware/evass.b19
+vendor/firmware/evass.mbn
+vendor/firmware/evass.mdt
 vendor/firmware/evass.b00
 vendor/firmware/evass.b01
 vendor/firmware/evass.b02
@@ -516,14 +505,12 @@ vendor/etc/permissions/qti_fingerprint_interface.xml
 vendor/etc/vintf/manifest/fod.xml
 
 # GNSS
-odm/bin/hw/android.hardware.gnss-aidl-service-qti
-odm/etc/init/android.hardware.gnss-aidl-service-qti.rc
-odm/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
-odm/etc/vintf/manifest/vendor.qti.gnss-service.xml
-odm/etc/izat_device.conf
-odm/lib64/vendor.qti.gnss-V3-ndk.so
-odm/lib64/vendor.qti.gnss-V4-ndk.so
-odm/lib64/vendor.qti.gnss-service.so
+vendor/bin/hw/android.hardware.gnss-aidl-service-qti
+vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
+vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
+vendor/etc/vintf/manifest/vendor.qti.gnss-service.xml
+vendor/lib64/vendor.qti.gnss-V5-ndk.so
+vendor/lib64/vendor.qti.gnss-service.so
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/garden_app
@@ -599,12 +586,12 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # Graphics (Adreno firmware)
-odm/firmware/a740_zap.b00
-odm/firmware/a740_zap.b01
-odm/firmware/a740_zap.b02
-odm/firmware/a740_zap.elf
-odm/firmware/a740_zap.mbn
-odm/firmware/a740_zap.mdt
+vendor/firmware/a740_zap.b00
+vendor/firmware/a740_zap.b01
+vendor/firmware/a740_zap.b02
+vendor/firmware/a740_zap.elf
+vendor/firmware/a740_zap.mbn
+vendor/firmware/a740_zap.mdt
 vendor/firmware/a740_sqe.fw
 vendor/firmware/a740_zap.b00
 vendor/firmware/a740_zap.b01
@@ -760,9 +747,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=-vendor
 vendor/lib64/vendor.qti.imsrtpservice@3.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE_SUFFIX=-vendor
 
-# IR
-odm/lib64/hw/consumerir.qcom.so
-
 # IRQ balance
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
@@ -792,21 +776,6 @@ vendor/lib64/vendor.qti.hardware.limits@1.0.so
 vendor/lib64/vendor.qti.hardware.limits@1.1.so
 vendor/lib64/vendor.qti.hardware.limits@1.2.so
 
-# MFIDOCA
-odm/bin/fidoca
-odm/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-service.rc
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mfidoca.xml
-odm/lib64/libmfido.so
-odm/lib64/libmt.so
-odm/lib64/libmt@1.3.so
-
-# MLIPAY - from diting OS3.0.1.0.VLFCNXM
-vendor/bin/mlipayd@1.1|08631f9b3dc1c27c723361a80140e87c9b534c28
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
-vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml|27aaea2ab58ace6555a634dc60ea062736342eb4
-vendor/lib64/libmlipay.so|254d4ef0ceccde3cccb240a0bfa83a299adf910b
-vendor/lib64/libmlipay@1.1.so|88787740a8a99dcf363d77711bfc1a886c68b288
-
 # MMI
 vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
 vendor/bin/mmid
@@ -814,11 +783,6 @@ vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
 vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
-
-# MTD
-odm/bin/mtd@1.3
-odm/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mtdservice.xml
 
 # Media
 vendor/bin/hw/qconfigservice
@@ -867,7 +831,7 @@ vendor/lib64/qti.video.utils.videobufferlayout.so
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 
 # Media configs
-odm/etc/media_profiles_kalama.xml
+vendor/etc/media_profiles_kalama.xml
 vendor/etc/media_kalama/video_system_specs.json
 vendor/etc/media_codecs_kalama_vendor.xml:vendor/etc/media_codecs_kalama.xml;TRYSRCFIRST
 vendor/etc/media_codecs_performance_kalama_vendor.xml:vendor/etc/media_codecs_performance_kalama.xml;TRYSRCFIRST
@@ -882,16 +846,18 @@ vendor/etc/init/minidump.rc
 vendor/etc/tzlog.dict
 
 # NFC
-odm/bin/hw/android.hardware.nfc@1.2-service-st
-odm/bin/hw/vendor.nxp.hardware.nfc@2.0-service
-odm/etc/init/android.hardware.nfc@1.2-service-st.rc
-odm/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
-odm/etc/libnfc-nci.conf
-odm/etc/libnfc-nxp.conf
-odm/etc/libnfc-nxp_RF.conf
-odm/lib64/libstnfc-auth.so
-odm/lib64/nfc_nci.nqx.default.hw.so
-odm/lib64/nfc_nci.st21nfc.st.so
+vendor/bin/hw/android.hardware.nfc@1.2-service-tms
+vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
+vendor/etc/init/android.hardware.nfc@1.2-service-tms.rc
+vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-tms.conf
+vendor/etc/libnfc-tms_RF.conf
+vendor/etc/libnfc-tms_RF_EC2.conf
+vendor/etc/libnfc-tms_RF_GB1.conf
+system_ext/lib64/libstnfc-nci.so
+vendor/lib64/nfc_nci.nqx.default.hw.so
+vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/etc/libnfc-SN220_19_2MHZ.conf
 vendor/etc/libnfc-SN220_38_4MHZ.conf
 vendor/etc/libnfc-hal-st-519_mtp.conf
@@ -1264,7 +1230,6 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Sensors
-odm/lib64/sensors.touch.detect.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
@@ -1312,15 +1277,6 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # TFTP
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
-
-# TIDA
-odm/bin/tidad@1.2
-odm/etc/init/vendor.xiaomi.hardware.tidaservice@1.2-service.rc
-odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.tidaservice.xml
-odm/lib64/libtida@1.2.so
-odm/lib64/vendor.xiaomi.hardware.tidaservice@1.0.so
-odm/lib64/vendor.xiaomi.hardware.tidaservice@1.1.so
-odm/lib64/vendor.xiaomi.hardware.tidaservice@1.2.so
 
 # Thermal (Meizu)
 vendor/etc/thermal.low.conf
@@ -1401,7 +1357,7 @@ vendor/lib64/vendor.qti.hardware.vpp@1.3.so
 vendor/lib64/vendor.qti.hardware.vpp@2.0.so
 
 # VPU firmware
-odm/firmware/vpu30_4v.mbn
+vendor/firmware/vpu30_4v.mbn
 vendor/firmware/vpu20_4v.mbn
 vendor/firmware/vpu20_4v_unsigned.mbn
 vendor/firmware/vpu30_4v_16mb.mbn
@@ -1465,12 +1421,8 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
 # Widevine DRM
-odm/lib64/libwvkeybox.so
 vendor/bin/hw/android.hardware.drm-service.widevine
 vendor/etc/init/android.hardware.drm-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libwvaidl.so
-
-# Xiaomi
-vendor/lib64/libmisight.so
