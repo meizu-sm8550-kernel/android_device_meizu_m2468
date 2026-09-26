@@ -1862,7 +1862,9 @@ vendor/lib64/libbluetooth_audio_session_aidl.so
 vendor/lib64/libboot_control_qti.so
 vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/libcamerapostproc.so
+vendor/lib64/libcamxfdalgo.so
 vendor/lib64/libcamxfdengine.so
+vendor/lib64/libcamxfacialfeatures.so
 vendor/lib64/libcamxhwnodecontext.so
 vendor/lib64/libcamxifestriping.so
 vendor/lib64/libcamximageformatutils.so
@@ -1891,6 +1893,7 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcomm-protos.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libcrussp.so
+vendor/lib64/libagmmixer.so
 vendor/lib64/libdiagjni.so
 vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdisplaydebug.so
