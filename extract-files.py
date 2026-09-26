@@ -41,13 +41,18 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/android.hardware.security.keymint-service-qti': blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
-  (
+    (
     'vendor/lib64/libspukeymint.so',
     'vendor/lib64/libqtikeymint.so',
     ): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
+    (
+    'vendor/lib64/nfc_nci_nxpsn.so', 
+    'vendor/lib64/ese_spi_nxp.so'
+    ): blob_fixup()
+        .add_needed('libbase_shim.so'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('qcodec2_shim.so'),
 }  # fmt: skip
