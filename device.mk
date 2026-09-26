@@ -131,6 +131,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service
 
+# Dirty hack for slim_daemon and others
+PRODUCT_PACKAGES += \
+    libemutls_get_address
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey

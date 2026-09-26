@@ -58,6 +58,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
     (
+    'vendor/bin/qguard'
     'vendor/lib64/tms-utils.so',
     'vendor/lib64/nfc_nci.thn31nfc.tms.so',
     'vendor/lib64/nfc_nci.nqx.default.hw.so',
@@ -80,6 +81,10 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('rpcmem_alloc')
         .clear_symbol_version('rpcmem_free')
         .clear_symbol_version('rpcmem_to_fd'),
+    (
+    'vendor/bin/slim_daemon'
+    ): blob_fixup()
+        .add_needed('libemutls_get_address.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
