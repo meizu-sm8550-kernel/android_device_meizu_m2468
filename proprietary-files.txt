@@ -1250,6 +1250,7 @@ vendor/lib64/libtime_genoff.so
 # Trusted Execution Environment connector
 system_ext/lib64/libGPMTEEC_system.qti.so
 system_ext/lib64/libGPQTEEC_system.qti.so
+system_ext/lib64/libGPTEE_system.qti.so
 vendor/lib64/libGPMTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libQTEEConnector_vendor.so
