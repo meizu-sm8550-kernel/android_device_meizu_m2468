@@ -45,7 +45,10 @@ blob_fixups: blob_fixups_user_type = {
     'product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml',
     ): blob_fixup()
         .regex_replace('version="2.0"', 'version="1.0"'),
-    'vendor/bin/hw/android.hardware.security.keymint-service-qti': blob_fixup()
+    (
+    'vendor/bin/hw/android.hardware.security.keymint-service-qti',
+    'vendor/bin/hw/android.hardware.security.keymint-service-spu-qti'
+    ): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     (
     'vendor/lib64/libspukeymint.so',
