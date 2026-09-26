@@ -62,7 +62,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 TARGET_SCREEN_DENSITY := 520
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # Kernel
 BOARD_KERNEL_BASE        := 0x00000000
