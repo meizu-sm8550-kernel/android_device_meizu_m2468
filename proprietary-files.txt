@@ -627,12 +627,6 @@ vendor/lib64/libllvm-qgl.so
 # Graphics (Vulkan)
 vendor/lib64/hw/vulkan.adreno.so
 
-# Hotword Enrollment - from vermeer OS2.0.207.0.VNKMIXM
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk|368fc8e844306eef0effa37a02040da356d9b1e3
-product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk|1c18b1e33ee0dcfbaeb8d94cbd6f655259e332c3
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|01b74943dc0ae9353883298d36fba94128536c9e
-system_ext/framework/com.android.hotwordenrollment.common.util.jar|86baa7f5ff304ca3dae863a6954ec6b285ff984c
-
 # IMS (system)
 system/lib64/vendor.qti.diaghal-V1-ndk.so
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
@@ -1047,9 +1041,8 @@ vendor/etc/qvr/qvr_hid_device_list.txt
 vendor/etc/qvr/qvr_usb_device_list.txt
 vendor/etc/qvr/qvrservice_config.txt
 
-# RIL (Esim hooking) - from fuxi OS2.0.200.7.VMCCNXM
-system_ext/framework/mirilhook.jar|1eef4d279b1180ae5ea4095a20ebd18891a9dae5
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|cdbd5157e63394d1ce96630f88de5186f9d821d9
+# RIL (Esim hooking) - from m2468 Flyme 10.5.2.1A
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|ac7eac555a9b02eedfe99365e6ff4ef2d9392923
 
 # RIL
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
@@ -1266,7 +1259,7 @@ vendor/etc/sensors/config/chre_dynamic_sensors.json
 vendor/etc/sensors/sns_reg_config
 
 # Soter - from diting OS3.0.1.0.VLFCNXM
-vendor/app/SoterService/SoterService.apk|5cef7d2bc300af3fc2d7e72c6b02c54e245eb637
+system/app/SoterService/SoterService.apk|17e3e2e5405f14abf032903943a6eee4a0485d6a
 
 # Soter
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
