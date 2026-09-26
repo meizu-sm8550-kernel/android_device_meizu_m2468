@@ -39,6 +39,12 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    (
+    'product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml',
+    'product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml',
+    'product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml',
+    ): blob_fixup()
+        .regex_replace('version="2.0"', 'version="1.0"'),
     'vendor/bin/hw/android.hardware.security.keymint-service-qti': blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     (
@@ -64,8 +70,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/audio.bluetooth_qti.default.so',
     'vendor/lib64/btaudio_offload_if.so',
     ): blob_fixup()
-        .replace_needed('android.hardware.bluetooth.audio-V2-ndk.so',
-                        'android.hardware.bluetooth.audio-V5-ndk.so'),
+        .replace_needed('android.hardware.bluetooth.audio-V2-ndk.so','android.hardware.bluetooth.audio-V5-ndk.so'),
     'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so' : blob_fixup()
         .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
 }  # fmt: skip
