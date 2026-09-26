@@ -15,25 +15,19 @@ vendor/lib64/libloadalgo_stub.so
 
 # ADSP (Modules)
 vendor/lib/rfsa/adsp/capi_cirrus_sp.so
-vendor/lib/rfsa/adsp/chre_qsh_shim.so
 vendor/lib/rfsa/adsp/libDspIOProxy_skel.so
 vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so
 vendor/lib/rfsa/adsp/libVppAisQnnHtp.so
 vendor/lib/rfsa/adsp/libVppFrcQnnHtp.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
 vendor/lib/rfsa/adsp/libevadsp_3_0.so
 vendor/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhalide_hexagon_remote_skel.so
 vendor/lib/rfsa/adsp/libmobilenet_dsp_frc.so
 vendor/lib/rfsa/adsp/libmobilenet_dsp_frc_networks.so
 vendor/lib/rfsa/adsp/libqvr_3dof_tracker_skel.so
 vendor/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
 vendor/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
-vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libtracker_6dof_skel_8450.so
 vendor/lib/rfsa/adsp/libvpp_ais.so
 vendor/lib/rfsa/adsp/libvpp_ais_networks.so
@@ -41,8 +35,6 @@ vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 vendor/lib/rfsa/adsp/libvpp_vqa_networks.so
 vendor/lib/rfsa/adsp/libvpt_action_recognition.so
-vendor/lib/rfsa/adsp/nearby.napp_header
-vendor/lib/rfsa/adsp/nearby.so
 
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
@@ -51,9 +43,7 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/etc/misound_asc_model.tflite
 vendor/lib64/libPeripheralStateUtils.so
-vendor/lib64/lib_misound_asc.so
 vendor/lib64/libadm.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libcapiv2svacnnvendor.so
@@ -62,7 +52,6 @@ vendor/lib64/libcapiv2udk7vendor.so
 vendor/lib64/libcapiv2uvvendor.so
 vendor/lib64/libfcsam.so;FIX_SONAME
 vendor/lib64/libmcs.so
-vendor/lib64/libmisoundsa.so
 vendor/lib64/libpal_net_if.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libresampler.so
@@ -477,7 +466,6 @@ vendor/lib64/libfastcvopt.so
 
 # Fingerprint
 vendor/etc/permissions/qti_fingerprint_interface.xml
-vendor/etc/vintf/manifest/fod.xml
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
@@ -494,6 +482,7 @@ vendor/bin/mlid
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/etc/init/loc-launcher.rc
+vendor/etc/init/vendor.qsap.sensors.rc
 vendor/etc/init/vendor.qsap.location.rc
 vendor/etc/init/vendor.qsap.qapeservice.rc
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
@@ -501,8 +490,9 @@ vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
+vendor/etc/seccomp_policy/qsap_dcfd.policy
+vendor/etc/seccomp_policy/qsap_sensors.policy
 vendor/etc/seccomp_policy/qsap_qapeservice.policy
-vendor/etc/seccomp_policy/qsap_voiceui.policy
 vendor/etc/apdr.conf
 vendor/etc/batching.conf
 vendor/etc/gps.conf
@@ -818,10 +808,6 @@ vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-mtp-SN100.conf
 vendor/etc/libnfc-qrd-SN100.conf
 vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
-vendor/etc/st54j_conf.txt
-vendor/etc/st54k_conf_38.4MHz.txt
-vendor/firmware/st54j_fw.bin
-vendor/firmware/st54k_conf_38.4MHz.bin
 vendor/lib64/libsn100u_fw.so;FIX_SONAME
 vendor/lib64/libsn220u_fw.so;FIX_SONAME
 vendor/lib64/libstfactory-vendor.so
@@ -1005,9 +991,9 @@ vendor/etc/init/qcrilNrd.rc
 vendor/etc/scLog/Diag_pmic.cfg
 vendor/etc/scLog/diag_audio.cfg
 vendor/etc/scLog/Diag_modem.cfg
-vendor/etc/scLog/Diag_sensor.cfg
-vendor/etc/scLog/Diag_audio_pmic.cfg
-vendor/etc/scLog/Diag_seensor_pmic.cfg
+vendor/etc/scLog/DIAG_sensor.cfg
+vendor/etc/scLog/DIAG_audio_pmic.cfg
+vendor/etc/scLog/DIAG_seensor_pmic.cfg
 vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
@@ -1044,7 +1030,6 @@ vendor/etc/vintf/manifest/android.hardware.radio.sim.xml
 vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
 vendor/etc/vintf/manifest/deviceinfo-saidl.xml
 vendor/etc/vintf/manifest/qcrilhook-saidl.xml
-vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/qtiradio-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
@@ -1199,7 +1184,6 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 vendor/lib64/vendor.meizu.sensor_aux@1.0.so
 
 # Sensors (Configs)
-vendor/etc/sensors/config/chre_dynamic_sensors.json
 vendor/etc/sensors/sns_reg_config
 
 # Soter - from diting OS3.0.1.0.VLFCNXM
@@ -1222,7 +1206,6 @@ vendor/etc/thermal.high.conf
 vendor/etc/thermal.sgame.conf
 vendor/etc/thermal.super.conf
 vendor/etc/thermal.monkey.conf
-vendor/etc/thermal.engine.conf
 vendor/etc/thermal.benchmark.conf
 
 # Thermal engine
@@ -1232,8 +1215,6 @@ vendor/etc/thermal-engine.conf
 vendor/lib64/liblmthermallistner.so
 vendor/lib64/libthermalclient.so
 vendor/etc/thermal-engine.conf
-vendor/etc/thermal-map.conf
-vendor/etc/thermald-devices.conf
 
 # Time services
 vendor/app/TimeService/TimeService.apk
@@ -1292,9 +1273,7 @@ vendor/lib64/libvideoutils.so
 # WiFi
 vendor/bin/cnss-daemon
 vendor/etc/init/init.vendor.wlan.rc
-vendor/etc/wifi/kiwi/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
-vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/icm.conf
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/passpointProfile.conf
