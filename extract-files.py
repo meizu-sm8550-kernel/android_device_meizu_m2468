@@ -46,6 +46,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libqtikeymint.so',
     ): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    'vendor/lib64/libqcodec2_core.so': blob_fixup()
+        .add_needed('qcodec2_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
