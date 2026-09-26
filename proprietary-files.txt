@@ -108,13 +108,9 @@ vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2udk7vendor.so
 vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libfcsam.so;FIX_SONAME
 vendor/lib64/libmcs.so
 vendor/lib64/libpal_net_if.so
 vendor/lib64/libqtigefar.so
-vendor/lib64/libresampler.so
-vendor/lib64/libvui_dmgr_client.so
-vendor/lib64/libxlog.so
 
 # Audio FX modules
 vendor/lib64/soundfx/libasphere.so
@@ -255,21 +251,13 @@ system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpV73CalculatorStub
 vendor/lib64/libQnnSaver.so
 vendor/lib64/libStereoRectifyWrapper.so
 vendor/lib64/libbitmlenginev2.so
-vendor/lib64/libcalculator.so
-vendor/lib64/libcalculator_htp.so
 vendor/lib64/libcamxexternalformatutils.so
-vendor/lib64/libmicuttlefish_fs.so
-vendor/lib64/libmivsock_utils.so
 vendor/lib64/libos.so
 vendor/lib64/libqvr_cam_cdsp_driver_stub.so
 vendor/lib64/libqvr_cdsp_driver_stub.so
 vendor/lib64/libqvrcamera_client.qti.so
 vendor/lib64/libqvrcameraplayback.so
 vendor/lib64/libqvrservice_client.qti.so
-vendor/lib64/libqvrservice_ov7251_hvx_tuning.so
-vendor/lib64/libqvrservice_ov9282_hvx_tuning.so
-vendor/lib64/libqvrservice_v4l_ov7251_hvx_tuning.so
-vendor/lib64/libsnpe_config.so;DISABLE_CHECKELF
 vendor/lib64/libsynx.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
@@ -375,7 +363,6 @@ vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Display (SDM)
 vendor/etc/display/DPU660.xml
@@ -551,8 +538,6 @@ vendor/lib64/libcdfw.so
 vendor/lib64/libcdfw_remote_api.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libengineplugin.so
-vendor/lib64/libgarden.so
-vendor/lib64/libgarden_haltests_e2e.so
 vendor/lib64/libgdtap.so
 vendor/lib64/libgeofencing.so
 vendor/lib64/libgnss.so
@@ -709,7 +694,7 @@ vendor/lib64/lib-rtpcommon.so
 vendor/lib64/lib-rtpcore.so
 vendor/lib64/lib-rtpsl.so
 vendor/lib64/librcc.so
-vendor/lib64/vendor.qti.hardware.radio.ims-V9-ndk.so
+vendor/lib64/vendor.qti.hardware.radio.ims-V12-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so
@@ -853,7 +838,6 @@ vendor/etc/libnfc-qrd-SN100.conf
 vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
 vendor/lib64/libsn100u_fw.so;FIX_SONAME
 vendor/lib64/libsn220u_fw.so;FIX_SONAME
-vendor/lib64/libstfactory-vendor.so
 vendor/lib64/se_nq_extn_client.so
 vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
 
@@ -864,9 +848,9 @@ vendor/etc/public.libraries.txt
 vendor/lib64/libQnnCpu.so
 vendor/lib64/libQnnHtp.so
 vendor/lib64/libQnnHtpPrepare.so
-vendor/lib64/libQnnHtpV73.so
-vendor/lib64/libQnnHtpV73Skel.so
-vendor/lib64/libQnnHtpV73Stub.so
+system/lib64/libQnnHtpV73.so
+system/lib64/libQnnHtpV73Skel.so
+system/lib64/libQnnHtpV73Stub.so
 vendor/lib64/libQnnSystem.so
 vendor/lib64/libqnnengine.so
 
@@ -1038,7 +1022,7 @@ vendor/etc/scLog/diag_audio.cfg
 vendor/etc/scLog/Diag_modem.cfg
 vendor/etc/scLog/DIAG_sensor.cfg
 vendor/etc/scLog/DIAG_audio_pmic.cfg
-vendor/etc/scLog/DIAG_seensor_pmic.cfg
+vendor/etc/scLog/DIAG_sensor_pmic.cfg
 vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
@@ -1274,12 +1258,7 @@ vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # Trusted User Interface
-vendor/lib64/libTouchInputVM.so
-vendor/lib64/libTrustedInput.so
-vendor/lib64/libTrustedInputTZ.so
-vendor/lib64/libTrustedInputUtils.so
 vendor/lib64/libcpion.so
-vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libsi.so
 vendor/lib64/libtrustedapploader.so
 
