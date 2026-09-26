@@ -170,7 +170,7 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/properties/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 
 # VINTF
-DEVICE_MATRIX_FILE := 
+DEVICE_MATRIX_FILE := \
     hardware/qcom-caf/common/compatibility_matrix.xml \
     $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 
