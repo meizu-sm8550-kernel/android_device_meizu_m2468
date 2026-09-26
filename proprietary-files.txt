@@ -59,14 +59,7 @@ vendor/lib/rfsa/adsp/bm3a73v08s11n44.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n45.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n50.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n51.bin
-vendor/lib/rfsa/adsp/bm3a73v08s11n57.bin
-vendor/lib/rfsa/adsp/bm3a73v08s11n58.bin
-vendor/lib/rfsa/adsp/bm3a73v08s11n59.bin
-vendor/lib/rfsa/adsp/bm3a73v08s11n60.bin
-vendor/lib/rfsa/adsp/bm3a73v08s11n61.bin
-vendor/lib/rfsa/adsp/bm3a73v08s11n62.bin
-vendor/lib/rfsa/adsp/bm3a73v08s11n63.bin
-vendor/lib/rfsa/adsp/libCalculator_skel.so
+system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libCalculator_skel.so:vendor/lib/rfsa/adsp/libCalculator_skel.so
 system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpV73.so:vendor/lib/rfsa/adsp/libQnnHtpV73.so
 system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpV73Skel.so:vendor/lib/rfsa/adsp/libQnnV73Skel.so
 system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnSaver.so:vendor/lib/rfsa/adsp/libQnnSaver.so
@@ -254,26 +247,12 @@ vendor/lib64/libc++_shared.so
 vendor/lib64/libnanopb.so
 
 # Camera Vendor
-vendor/lib64/camera/libPlatformValidatorShared.so;MODULE_SUFFIX=-camera
-vendor/lib64/libPlatformValidatorShared.so
 vendor/lib64/libQnnChrometraceProfilingReader.so
-vendor/lib64/libQnnGpu.so
-vendor/lib64/libQnnGpuNetRunExtensions.so
-vendor/lib64/libQnnGpuProfilingReader.so
-vendor/lib64/libQnnHtpNetRunExtensions.so
-vendor/lib64/libQnnHtpProfilingReader.so
-vendor/lib64/libQnnHtpV73CalculatorStub.so
+system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnGpu.so:vendor/lib64/libQnnGpu.so
+system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpNetRunExtensions.so:vendor/lib64/libQnnHtpNetRunExtensions.so
+system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpProfilingReader.so:vendor/lib64/libQnnHtpProfilingReader.so
+system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpV73CalculatorStub.so:vendor/lib64/libQnnHtpV73CalculatorStub.so
 vendor/lib64/libQnnSaver.so
-vendor/lib64/libSNPE.so
-vendor/lib64/libSNPESample.so
-vendor/lib64/libScenescape.so
-vendor/lib64/libSnpeDspV65Stub.so;FIX_SONAME
-vendor/lib64/libSnpeDspV66Stub.so;FIX_SONAME
-vendor/lib64/libSnpeHta.so;FIX_SONAME
-vendor/lib64/libSnpeHtpPrepare.so
-vendor/lib64/libSnpeHtpV68Stub.so
-vendor/lib64/libSnpeHtpV69Stub.so
-vendor/lib64/libSnpeHtpV73Stub.so
 vendor/lib64/libStereoRectifyWrapper.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libcalculator.so
@@ -566,7 +545,6 @@ vendor/etc/sap.conf
 vendor/etc/sec_config
 vendor/etc/xtwifi.conf
 vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
-vendor/lib64/libMiVDR.so
 vendor/lib64/libbatching.so
 vendor/lib64/libcacertclient.so
 vendor/lib64/libcdfw.so
@@ -1066,8 +1044,6 @@ vendor/etc/qcril_database/upgrade/config/10.0_config.sql;FILEGROUP=proprietary_r
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/12.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/13.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
-vendor/etc/qcril_database/upgrade/config/14.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
-vendor/etc/qcril_database/upgrade/config/15.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/6.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/7.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
 vendor/etc/qcril_database/upgrade/config/8.0_config.sql;FILEGROUP=proprietary_rildb_config_sql_files
@@ -1290,8 +1266,9 @@ vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
 # Trusted Execution Environment connector
+system_ext/lib64/libGPMTEEC_system.qti.so
+system_ext/lib64/libGPQTEEC_system.qti.so
 vendor/lib64/libGPMTEEC_vendor.so
-vendor/lib64/libGPQTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
