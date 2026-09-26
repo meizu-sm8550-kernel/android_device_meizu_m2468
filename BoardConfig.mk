@@ -74,7 +74,8 @@ BOARD_KERNEL_CMDLINE := \
     nosoftlockup \
     page_poison=1 \
     sysrq_always_enabled \
-    bootconfig
+    bootconfig \
+    androidboot.selinux=permissive
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
