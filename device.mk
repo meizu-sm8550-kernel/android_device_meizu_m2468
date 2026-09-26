@@ -384,6 +384,9 @@ PRODUCT_PACKAGES += \
 # Vibrator
 $(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
 
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 33
+
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
