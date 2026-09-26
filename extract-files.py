@@ -49,8 +49,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
     (
-    'vendor/lib64/nfc_nci_nxpsn.so', 
-    'vendor/lib64/ese_spi_nxp.so'
+    'vendor/lib64/tms-utils.so',
+    'vendor/lib64/nfc_nci.nqx.default.hw.so', 
+    
     ): blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
