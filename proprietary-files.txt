@@ -249,7 +249,7 @@ system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpV73CalculatorStub
 system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnSaver.so:vendor/lib64/libQnnSaver.so
 vendor/lib64/libStereoRectifyWrapper.so
 vendor/lib64/libbitmlenginev2.so
-vendor/lib64/libcamxcommonutils
+vendor/lib64/libcamxcommonutils.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libos.so
 vendor/lib64/libqvr_cam_cdsp_driver_stub.so
