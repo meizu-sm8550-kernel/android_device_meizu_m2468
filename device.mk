@@ -8,7 +8,7 @@
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/meizu/m2468-vendor.mk)
+$(call inherit-product, vendor/meizu/m2468/m2468-vendor.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
