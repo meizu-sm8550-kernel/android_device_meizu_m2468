@@ -495,6 +495,8 @@ vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libfastcvopt.so
 
 # Fingerprint
+vendor/bin/hw/android.hardware.biometrics.fingerprint-service-jv
+vendor/etc/init/android.hardware.biometrics.fingerprint-service-jv
 vendor/etc/permissions/qti_fingerprint_interface.xml
 
 # GNSS
