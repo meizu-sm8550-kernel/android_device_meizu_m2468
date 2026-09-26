@@ -825,6 +825,7 @@ vendor/etc/libnfc-tms_RF.conf
 vendor/etc/libnfc-tms_RF_EC2.conf
 vendor/etc/libnfc-tms_RF_GB1.conf
 system_ext/lib64/libstnfc-nci.so
+system_ext/lib64/libstatlog_nfc_st.so
 vendor/lib64/nfc_nci.nqx.default.hw.so
 vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/etc/libnfc-SN220_19_2MHZ.conf
