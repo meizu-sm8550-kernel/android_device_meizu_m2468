@@ -123,7 +123,6 @@ vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bttpi-impl.so
-vendor/lib64/lib_bt_lhdc.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libsoc_helper.so
 vendor/lib64/vendor.qti.hardware.bttpi-V2-ndk.so
@@ -243,12 +242,11 @@ vendor/lib64/libc++_shared.so
 vendor/lib64/libnanopb.so
 
 # Camera Vendor
-vendor/lib64/libQnnChrometraceProfilingReader.so
 system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnGpu.so:vendor/lib64/libQnnGpu.so
 system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpNetRunExtensions.so:vendor/lib64/libQnnHtpNetRunExtensions.so
 system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpProfilingReader.so:vendor/lib64/libQnnHtpProfilingReader.so
 system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpV73CalculatorStub.so:vendor/lib64/libQnnHtpV73CalculatorStub.so
-vendor/lib64/libQnnSaver.so
+system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnSaver.so:vendor/lib64/libQnnSaver.so
 vendor/lib64/libStereoRectifyWrapper.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libcamxexternalformatutils.so
@@ -1299,7 +1297,6 @@ vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/wifi/kiwi_v2/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/icm.conf
 vendor/etc/wifi/p2p_supplicant_overlay.conf
-vendor/etc/wifi/passpointProfile.conf
 vendor/etc/wifi/vendor_cmd.xml
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
