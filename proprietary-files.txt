@@ -1399,14 +1399,6 @@ vendor/bin/hw/vendor.qti.hardware.lights.service
 vendor/bin/hw/vendor.qti.psiclient@1.0-service
 vendor/bin/hw/vendor.xingji.hardware.qsee.store@1.0-service
 vendor/bin/ims-dataservice-daemon
-vendor/bin/init.class_main.sh
-vendor/bin/init.kernel.post_boot.sh
-vendor/bin/init.qcom.class_core.sh
-vendor/bin/init.qcom.early_boot.sh
-vendor/bin/init.qcom.post_boot.sh
-vendor/bin/init.qcom.sh
-vendor/bin/init.qti.kernel.sh
-vendor/bin/init.qti.write.sh
 vendor/bin/iozone
 vendor/bin/ipacm-diag
 vendor/bin/meizu_charging_helper
@@ -1427,11 +1419,9 @@ vendor/bin/spu_install_keybox
 vendor/bin/ssr_diag
 vendor/bin/ssr_setup
 vendor/bin/subsystem_ramdump
-vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/tlpd
 vendor/bin/ubwcconvert
 vendor/bin/vendor_cmd_tool
-vendor/bin/vendor_modprobe.sh
 vendor/bin/vmmgr
 vendor/etc/IPACM_Filter_cfg.xml
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -1472,8 +1462,6 @@ vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/dcfd.rc
 vendor/etc/init/dlsc.rc
-vendor/etc/init/hw/init.qcom.rc
-vendor/etc/init/hw/init.qti.kernel.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.meizu.smart_zram.rc
 vendor/etc/init/init.qti.display_boot.rc
@@ -1603,7 +1591,6 @@ vendor/etc/sensors/config/sns_transport_ppe.json
 vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/smomo_setting.xml
 vendor/etc/star_core/star_core_config.json
-vendor/etc/ueventd.rc
 vendor/etc/usecaseKvManager.xml
 vendor/etc/vintf/manifest/android.hardware.drm-service.xml
 vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
