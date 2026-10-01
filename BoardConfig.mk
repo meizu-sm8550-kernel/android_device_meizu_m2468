@@ -69,20 +69,20 @@ BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 
 BOARD_KERNEL_CMDLINE := \
-    video=vfb:640x400,bpp=32,memsize=3072000 \
     qcom_geni_serial.con_enabled=1 \
     nosoftlockup \
     page_poison=1 \
     sysrq_always_enabled \
-    bootconfig \
-    androidboot.selinux=permissive
+    printk.devkmsg=on
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.load_modules_parallel=true \
-    androidboot.console=ttyMSM0
+    androidboot.console=ttyMSM0 \
+    androidboot.selinux=permissive \
+    androidboot.init_fatal_panic=true
 
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
