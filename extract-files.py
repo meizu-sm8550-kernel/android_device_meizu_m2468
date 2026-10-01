@@ -85,7 +85,11 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/slim_daemon'
     ): blob_fixup()
         .add_needed('libemutls_get_address.so'),
-    'vendor/lib64/libsnapdragoncolor-manager.so': blob_fixup()
+    (
+    'vendor/lib64/libdpps.so',
+    'vendor/lib64/libsnapdragoncolor-manager.so',
+    'vendor/lib64/libsynclight.so',
+    ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2_1.so'),
 }  # fmt: skip
 
