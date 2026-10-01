@@ -375,6 +375,8 @@ vendor/etc/display/DPU820.xml
 vendor/etc/display/DPU8__.xml
 vendor/etc/display/DPU9__.xml
 vendor/etc/display/advanced_sf_offsets.xml
+vendor/etc/display/qdcm_calib_data_ILI7838E_TIANMA_MEIZU.json
+vendor/etc/display/starbrightness.xml
 vendor/etc/display/thermallevel_to_fps.xml
 vendor/lib64/libbacklight-calib.so
 vendor/lib64/libclstc_algorithm_adapter.so
@@ -1447,7 +1449,6 @@ vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
 vendor/etc/camera/camxoverridesettings.txt
 vendor/etc/card-defs.xml
 vendor/etc/charger_fw_fstab.qti
-vendor/etc/display/starbrightness.xml
 vendor/etc/excluded-input-devices.xml
 vendor/etc/external_camera_config.xml
 vendor/etc/gnss_antenna_info.conf
