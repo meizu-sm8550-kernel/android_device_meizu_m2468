@@ -223,9 +223,6 @@ PRODUCT_COPY_FILES += \
 # Lineage Health
 $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Media
 PRODUCT_PACKAGES += \
     libmedia_codeclist \
