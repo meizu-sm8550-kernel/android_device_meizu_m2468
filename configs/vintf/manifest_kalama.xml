@@ -34,16 +34,6 @@
         <fqname>@1.1::IBluetoothHci/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.camera.provider</name>
-        <transport>hwbinder</transport>
-        <version>2.4</version>
-        <interface>
-            <name>ICameraProvider</name>
-            <instance>external/0</instance>
-        </interface>
-        <fqname>@2.4::ICameraProvider/external/0</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
