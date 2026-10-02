@@ -46,6 +46,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     audio.primary.default \
     audio.r_submix.default \
+    audio.usb.default \
     libtinycompress
 
 PRODUCT_PACKAGES += \
@@ -105,8 +106,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    libbluetooth_audio_session
+    android.hardware.bluetooth.audio-impl \
+    audio.bluetooth.default
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \

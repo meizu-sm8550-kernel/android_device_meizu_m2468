@@ -66,15 +66,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('qcodec2_shim.so'),
-    (
-        'vendor/lib64/libbluetooth_audio_session_aidl.so',
-        'vendor/lib64/libbluetooth_audio_session_aidl_qti.so',
-        'vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so',
-        'vendor/lib64/hw/audio.bluetooth.default.so',
-        'vendor/lib64/hw/audio.bluetooth_qti.default.so',
-        'vendor/lib64/btaudio_offload_if.so',
-    ): blob_fixup()
-        .replace_needed('android.hardware.bluetooth.audio-V2-ndk.so','android.hardware.bluetooth.audio-V5-ndk.so'),
     'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so' : blob_fixup()
         .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
     'vendor/lib64/libarcsoft_high_dynamic_range_v5.so': blob_fixup()

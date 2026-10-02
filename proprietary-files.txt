@@ -97,6 +97,9 @@ vendor/lib/rfsa/adsp/libvpt_action_recognition.so
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
+# AGM
+vendor/lib64/libagmmixer.so
+
 # Audio
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
@@ -1813,24 +1816,7 @@ vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so
 vendor/lib64/com.qualcomm.mcx.policy.mfl.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/ftm_fm_lib.so
-vendor/lib64/hw/android.hardware.audio.effect@2.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@4.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@5.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@6.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so
-vendor/lib64/hw/android.hardware.audio@2.0-impl.so
-vendor/lib64/hw/android.hardware.audio@4.0-impl.so
-vendor/lib64/hw/android.hardware.audio@5.0-impl.so
-vendor/lib64/hw/android.hardware.audio@6.0-impl.so
-vendor/lib64/hw/android.hardware.audio@7.0-impl.so
-vendor/lib64/hw/android.hardware.audio@7.1-impl.so
-vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
-vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
-vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
-vendor/lib64/hw/audio.bluetooth.default.so
-vendor/lib64/hw/audio.r_submix.default.so
-vendor/lib64/hw/audio.usb.default.so
 vendor/lib64/hw/audio.virtual.default.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.offline.so
@@ -1874,8 +1860,6 @@ vendor/lib64/libarcsoft_triple_sat.so
 vendor/lib64/libarcsoft_triple_zoomtranslator.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbitmlengine.so
-vendor/lib64/libbluetooth_audio_session.so
-vendor/lib64/libbluetooth_audio_session_aidl.so
 vendor/lib64/libboot_control_qti.so
 vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/libcamerapostproc.so
@@ -1910,7 +1894,6 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcomm-protos.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libcrussp.so
-vendor/lib64/libagmmixer.so
 vendor/lib64/libdiagjni.so
 vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdisplaydebug.so
