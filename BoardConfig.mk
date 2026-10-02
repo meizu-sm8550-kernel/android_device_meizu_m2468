@@ -72,8 +72,7 @@ BOARD_KERNEL_CMDLINE := \
     qcom_geni_serial.con_enabled=1 \
     nosoftlockup \
     page_poison=1 \
-    sysrq_always_enabled \
-    printk.devkmsg=on
+    sysrq_always_enabled
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
@@ -81,8 +80,7 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.load_modules_parallel=true \
     androidboot.console=ttyMSM0 \
-    androidboot.selinux=permissive \
-    androidboot.init_fatal_panic=true
+    androidboot.selinux=permissive
 
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
