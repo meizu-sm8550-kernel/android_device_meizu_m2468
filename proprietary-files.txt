@@ -2164,15 +2164,7 @@ vendor/lib64/vendor.xingji.hardware.qsee.store@1.0.so
 vendor/etc/audio/sku_kalama/MicSealingTest.wav
 vendor/etc/audio/sku_kalama/RecNoise.wav
 vendor/etc/audio/sku_kalama/factory_test.wav
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_cdp_wsa883x.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml
-vendor/etc/audio/sku_kalama/mixer_paths_kalama_qrd.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_cdp.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_mtp.xml
-vendor/etc/audio/sku_kalama/resourcemanager_kalama_qrd.xml
 vendor/etc/audio/sku_kalama/silent-3sec.wav
-vendor/etc/audio/sku_kalama_qssi/audio_policy_configuration.xml
 
 # Factory audio (Kalama)
 vendor/etc/ftm_test_config_kalama-qrd-snd-card
