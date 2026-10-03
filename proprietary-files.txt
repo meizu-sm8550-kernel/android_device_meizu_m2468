@@ -1564,6 +1564,10 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Sensors (Meizu)
 vendor/lib64/vendor.meizu.sensor_aux@1.0.so
+vendor/bin/hw/vendor.meizu.sensor_aux@1.0-default-service
+vendor/etc/init/vendor.meizu.sensor_aux@1.0-default-service.rc
+vendor/etc/vintf/manifest/vendor.meizu.sensor_aux@1.0-default-service.xml
+vendor/lib64/vendor.meizu.sensor_aux_m2381@1.0-default-impl.so
 
 # Sensors (Configs)
 vendor/etc/sensors/sns_reg_config
