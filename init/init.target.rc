@@ -251,6 +251,8 @@ on boot
 # Permissions for tp  {@start
     chmod 0660 /sys/class/meizu/tp/gesture_control
     chown system system /sys/class/meizu/tp/gesture_control
+    # Enable all gesture + FOD + 0x272
+    write /sys/class/meizu/tp/gesture_control "\x1f\x01\x00\x83"
 
     chmod 0660 /sys/class/meizu/tp/gesture_data
     chown system system /sys/class/meizu/tp/gesture_data
