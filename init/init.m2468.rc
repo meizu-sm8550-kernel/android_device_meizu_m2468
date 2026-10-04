@@ -1,0 +1,17 @@
+# Copyright (C) 2026 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Enable all gesture
+on post-fs-data
+    chmod 0777 /sys/devices/platform/mx-gs/gesture_control
+
+on property:sys.boot_completed=1
+    start mz_gesture_control_init
+
+service mz_gesture_control_init /vendor/bin/mz_fp_gesture_init
+    class late_start
+    user system
+    group system
+    disabled
+    oneshot

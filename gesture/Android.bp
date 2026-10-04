@@ -1,0 +1,15 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+//
+
+cc_binary {
+    name: "mz_fp_gesture_init",
+    srcs: ["init/mz_fp_gesture_init.cpp"],
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+    vendor: true,
+}

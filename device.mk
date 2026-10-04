@@ -174,6 +174,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom.vendor_ramdisk
+# Gesture
+PRODUCT_PACKAGES += \
+    mz_fp_gesture_init
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -201,6 +204,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qti.kernel.rc \
+    init.m2468.rc \
     init.target.rc \
     init.qcom.factory.rc \
     init.recovery.qcom.rc
