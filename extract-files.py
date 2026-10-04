@@ -103,6 +103,10 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+        
+    'vendor/bin/qseecom_sample_client': blob_fixup()
+        .add_needed('libion.so'),
+
     (
         'vendor/lib64/libqcrilNr.so', 
         'vendor/lib64/libril-db.so'

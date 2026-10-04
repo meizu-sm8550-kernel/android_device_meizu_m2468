@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from Xiaomi 13 Pro (OS3.0.311.0.WMBCNXM).
+## are from Meizu 21 Note (Flyme 12.6.0.0A).
 
 # ACDB
 vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
@@ -83,10 +83,8 @@ vendor/lib/rfsa/adsp/bm3a73v08s11n44.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n45.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n50.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n51.bin
-system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libCalculator_skel.so:vendor/lib/rfsa/adsp/libCalculator_skel.so
-system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpV73.so:vendor/lib/rfsa/adsp/libQnnHtpV73.so
-system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpV73Skel.so:vendor/lib/rfsa/adsp/libQnnV73Skel.so
-system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnSaver.so:vendor/lib/rfsa/adsp/libQnnSaver.so
+vendor/lib/rfsa/adsp/libQnnHtpV73.so
+vendor/lib/rfsa/adsp/libQnnHtpV73Skel.so
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
 vendor/lib/rfsa/adsp/libapn_dsp_skel.so
 vendor/lib/rfsa/adsp/libarc_htp_driver_skel.so
@@ -554,11 +552,6 @@ vendor/lib64/vendor.qti.hardware.camera.postproc-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Camera Vendor
-system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnGpu.so:vendor/lib64/libQnnGpu.so
-system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpNetRunExtensions.so:vendor/lib64/libQnnHtpNetRunExtensions.so
-system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpProfilingReader.so:vendor/lib64/libQnnHtpProfilingReader.so
-system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnHtpV73CalculatorStub.so:vendor/lib64/libQnnHtpV73CalculatorStub.so
-system/media/qnn/runtime_res_v73_2.16.0.231029_240410/libQnnSaver.so:vendor/lib64/libQnnSaver.so
 vendor/lib64/libStereoRectifyWrapper.so
 vendor/lib64/libos.so
 vendor/lib64/libqvr_cam_cdsp_driver_stub.so
@@ -609,9 +602,7 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/bin/qwesd
 vendor/bin/ssgqmigd64:vendor/bin/ssgqmigd
 vendor/bin/ssgtzd
-vendor/etc/init/qwesd.rc
 vendor/etc/init/ssgtzd.rc
-vendor/etc/seccomp_policy/qwesd@2.0.policy
 vendor/etc/ssg/tz_whitelist.json
 
 # DPM
@@ -672,11 +663,12 @@ vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 
 # Diag - from m2468 Flyme 10.5.2.1A
-vendor/etc/init/vendor.qti.diag.rc|7fac6597717eea1008311ccfa01d25f93582ef5c
-
-# Diag
+system/lib64/vendor.qti.diaghal-V1-ndk.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/libdiagatbparser_system.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
+vendor/etc/init/vendor.qti.diag.rc|7fac6597717eea1008311ccfa01d25f93582ef5c
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=-vendor
@@ -737,8 +729,8 @@ vendor/lib64/libtestutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/libvmfilexfer.so
 
-# Display (SDM) - from  rtwo_g-user 14 U1TR34.8-30-13-2-2 5b4b0d-dde58 release-keys
-vendor/lib64/libsdm-color.so|c36b857c03f1ac8e89882fd59812ae501e4c9772
+# Display (SDM) - from m2468 Flyme 12.6.0.0A
+vendor/lib64/libsdm-color.so|ed937e9f90d0c8ea390c75cb1abdfe4399abaecc
 
 # Display calibration data
 vendor/etc/display/backlight_calib_r66451_amoled_cmd_mode_dsi_visionox_panel_with_DSC.xml
@@ -781,6 +773,14 @@ vendor/lib64/vendor.display.postproc@1.0.so
 
 # Dumpstate
 vendor/bin/hw/android.hardware.dumpstate-service.qti
+
+# EMBMS
+vendor/bin/embmsslServer
+vendor/etc/init/init.embmssl_server.rc
+vendor/lib64/libembmsservice.so
+vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
+vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
+system_ext/lib64/vendor.qti.hardware.embmsslaidl-V2-ndk.so
 
 # EVA
 vendor/etc/eva/facedetection/model3.dat
@@ -981,6 +981,8 @@ system_ext/framework/vendor.qti.ims.configservice-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.connectionaidlservice-V1-java.jar
 system_ext/framework/vendor.qti.ims.datachannelservice-V1-java.jar
+system_ext/framework/vendor.qti.ims.datachannelservice-V2-java.jar
+system_ext/framework/vendor.qti.ims.datachannelservice-V3-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
@@ -1003,13 +1005,13 @@ system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
+system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
-system_ext/app/QtiTelephony/QtiTelephony.apk;REQUIRED=QtiTelephonyCompat
+system_ext/priv-app/QtiTelephony/QtiTelephony.apk;REQUIRED=QtiTelephonyCompat
 system_ext/priv-app/ims/ims.apk;REQUIRED=QtiTelephonyCompat
 
 # IMS (vendor)
@@ -1168,12 +1170,14 @@ vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
 vendor/etc/init/android.hardware.nfc@1.2-service-tms.rc
 vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/etc/libnfc-nci.conf
+product/etc/libnfc-nci-NXP.conf
+product/etc/libnfc-nci-STM.conf
 vendor/etc/libnfc-tms.conf
 vendor/etc/libnfc-tms_RF.conf
 vendor/etc/libnfc-tms_RF_EC2.conf
 vendor/etc/libnfc-tms_RF_GB1.conf
-system_ext/lib64/libstnfc-nci.so
-system_ext/lib64/libstatslog_nfc_st.so
+system/lib64/libstatslog_nfc_tms.so
+system/lib64/nqlibstatslog_nfc.so
 vendor/lib64/nfc_nci.nqx.default.hw.so
 vendor/lib64/nfc_nci.st21nfc.st.so
 vendor/etc/libnfc-SN220_19_2MHZ.conf
@@ -1198,12 +1202,24 @@ vendor/lib64/nfc_nci.thn31nfc.tms.so
 vendor/etc/public.libraries.txt
 
 # Neural networks
-vendor/lib64/libQnnCpu.so
+system/lib64/libQnnHtp.so;MODULE_SUFFIX=-system
+system_ext/lib64/libOpenCL_system.so
+system/lib64/qnn/qnn-2.31/libCalculator_skel.so:vendor/lib/rfsa/adsp/libCalculator_skel.so
+system/lib64/qnn/qnn-2.31/libQnnCpu.so:vendor/lib64/libQnnCpu.so
+system/lib64/qnn/qnn-2.31/libQnnDsp.so:vendor/lib64/libQnnDsp.so
+system/lib64/qnn/qnn-2.31/libQnnDspNetRunExtensions.so:vendor/lib64/libQnnDspNetRunExtensions.so
+system/lib64/qnn/qnn-2.31/libQnnGpu.so:vendor/lib64/libQnnGpu.so
+system/lib64/qnn/qnn-2.31/libQnnGpuNetRunExtensions.so:vendor/lib64/libQnnGpuNetRunExtensions.so
+system/lib64/qnn/qnn-2.31/libQnnHtpNetRunExtensions.so:vendor/lib64/libQnnHtpNetRunExtensions.so
+system/lib64/qnn/qnn-2.31/libQnnHtpV73CalculatorStub.so:vendor/lib64/libQnnHtpV73CalculatorStub.so
+system/lib64/qnn/qnn-2.31/libQnnHtpV73Skel.so:vendor/lib64/libQnnHtpV73Skel.so
+system/lib64/qnn/qnn-2.31/libQnnIr.so:vendor/lib64/libQnnIr.so
+system/lib64/qnn/qnn-2.31/libQnnLpai.so:vendor/lib64/libQnnLpai.so
+system/lib64/qnn/qnn-2.31/libQnnLpaiNetRunExtensions.so:vendor/lib64/libQnnLpaiNetRunExtensions.so
+system/lib64/qnn/qnn-2.31/libQnnModelDlc.so:vendor/lib64/libQnnModelDlc.so
 vendor/lib64/libQnnHtp.so
 vendor/lib64/libQnnHtpPrepare.so
-system/lib64/libQnnHtpV73.so
-system/lib64/libQnnHtpV73Skel.so
-system/lib64/libQnnHtpV73Stub.so
+vendor/lib64/libQnnHtpV73Stub.so
 vendor/lib64/libQnnSystem.so
 vendor/lib64/libqnnengine.so
 
@@ -1276,6 +1292,7 @@ system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so
 system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so
 system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so
+system_ext/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so
 system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
 vendor/bin/qcc-vendor
@@ -1342,6 +1359,13 @@ vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
+# QSPA
+system_ext/etc/init/qspa_system.rc
+system_ext/etc/qspa/qspa_default.rc
+vendor/bin/vendor.qti.qspa-service
+vendor/etc/init/vendor.qti.qspa-service.rc
+vendor/etc/vintf/manifest/vendor.qti.qspa-service.xml
+
 # QSPM
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
@@ -1357,8 +1381,8 @@ vendor/etc/qvr/qvr_hid_device_list.txt
 vendor/etc/qvr/qvr_usb_device_list.txt
 vendor/etc/qvr/qvrservice_config.txt
 
-# RIL (Esim hooking) - from m2468 Flyme 10.5.2.1A
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|ac7eac555a9b02eedfe99365e6ff4ef2d9392923
+# RIL (Esim hooking) - from m2468 Flyme 12.6.0.0A
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|6473306e686dc3407b848946498dd28e0c2e2493
 
 # RIL
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
@@ -1573,7 +1597,7 @@ vendor/lib64/vendor.meizu.sensor_aux_m2381@1.0-default-impl.so
 vendor/etc/sensors/sns_reg_config
 
 # Soter - from diting OS3.0.1.0.VLFCNXM
-system/app/SoterService/SoterService.apk|17e3e2e5405f14abf032903943a6eee4a0485d6a
+system/app/SoterService/SoterService.apk|37bc7210b9a4843c522f275e23d4a4c8c2228fb7
 
 # Soter
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
@@ -1724,11 +1748,12 @@ system_ext/etc/permissions/vendor.qti.imsdcservice.xml
 system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
 system_ext/lib64/vendor.qti.ims.datachannelservice-V1-ndk.so
+system_ext/lib64/vendor.qti.ims.datachannelservice-V2-ndk.so
+system_ext/lib64/vendor.qti.ims.datachannelservice-V3-ndk.so
 vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk
 vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk
 vendor/bin/audioadsprpcd
 vendor/bin/diag_uart_log
-vendor/bin/embmsslServer
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
@@ -1738,7 +1763,6 @@ vendor/bin/hw/vendor.meizu.hardware.fido@2.0-service
 vendor/bin/hw/vendor.meizu.hardware.ifaa@1.0-service
 vendor/bin/hw/vendor.meizu.hardware.meizu_charging@1.0-service
 vendor/bin/hw/vendor.meizu.hardware.meizu_kelog@1.0-service
-vendor/bin/hw/vendor.meizu.hardware.qsh_geofence-service
 vendor/bin/hw/vendor.qti.camera.provider-service_64
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/bin/hw/vendor.qti.hardware.lights.service
@@ -1749,7 +1773,6 @@ vendor/bin/iozone
 vendor/bin/ipacm-diag
 vendor/bin/meizu_charging_helper
 vendor/bin/memtester
-vendor/bin/mpower_manager
 vendor/bin/myftm
 vendor/bin/nqnfcinfo
 vendor/bin/pm_ioctl_app
@@ -1804,7 +1827,6 @@ vendor/etc/init/vendor.meizu.hardware.fido@2.0-service.rc
 vendor/etc/init/vendor.meizu.hardware.ifaa@1.0-service.rc
 vendor/etc/init/vendor.meizu.hardware.meizu_charging@1.0-service.rc
 vendor/etc/init/vendor.meizu.hardware.meizu_kelog@1.0-service.rc
-vendor/etc/init/vendor.meizu.hardware.qsh_geofence-service.rc
 vendor/etc/init/vendor.meizu.mpower_manager.rc
 vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/etc/init/vendor.qti.camera.provider-service_64.rc
@@ -1813,8 +1835,6 @@ vendor/etc/init/vendor.qti.hardware.lights.service.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/etc/init/vendor.qti.pasrknob@1.0-service.rc
 vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-vendor/etc/init/vendor.qti.qspa-service.rc
-vendor/etc/init/vendor.xingji.hardware.qsee.store@1.0-service.rc
 vendor/etc/init/vmmgr.rc
 vendor/etc/izat.conf
 vendor/etc/lm/AdaptLaunchFeature.xml
@@ -1929,7 +1949,6 @@ vendor/etc/vintf/manifest/vendor.meizu.hardware.fido@2.0-service.xml
 vendor/etc/vintf/manifest/vendor.meizu.hardware.ifaa@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.meizu.hardware.meizu_charging@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.meizu.hardware.meizu_kelog@1.0-service.xml
-vendor/etc/vintf/manifest/vendor.meizu.hardware.qsh_geofence-service.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-aidl-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.lights.service.xml
 vendor/etc/virtual_audio_policy_configuration.xml
@@ -2023,7 +2042,6 @@ vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdrmutils.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
-vendor/lib64/libembmsservice.so
 vendor/lib64/libemsensor.so
 vendor/lib64/libface3d_dev.so
 vendor/lib64/libfastcrc.so
@@ -2079,8 +2097,6 @@ vendor/lib64/libqdutils.so
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqservice.so
 vendor/lib64/libqsh_ble_pb.so
-vendor/lib64/libqsh_geofence.so
-vendor/lib64/libqsh_utils.so
 vendor/lib64/libqsh_wifi_test.so
 vendor/lib64/libqtbase.so
 vendor/lib64/libqti-iopd-client.so
@@ -2133,13 +2149,9 @@ vendor/lib64/vendor.meizu.hardware.fido@2.0.so
 vendor/lib64/vendor.meizu.hardware.ifaa@1.0.so
 vendor/lib64/vendor.meizu.hardware.meizu_charging@1.0.so
 vendor/lib64/vendor.meizu.hardware.meizu_kelog@1.0.so
-vendor/lib64/vendor.meizu.hardware.qsh_geofence-V1-ndk_platform.so
-vendor/lib64/vendor.meizu.hardware.smart_scene@1.0.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
 vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so
-vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
-vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
