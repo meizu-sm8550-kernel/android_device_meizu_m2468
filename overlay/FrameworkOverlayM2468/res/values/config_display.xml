@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <integer-array name="config_ambientBrighteningThresholds">
+        <item>100</item>
+    </integer-array>
+
+    <integer-array name="config_ambientDarkeningThresholds">
+        <item>200</item>
+    </integer-array>
+
+        <array name="config_autoBrightnessDisplayValuesNits">
+        <item>4.5</item>
+        <item>4.5</item>
+        <item>18.9</item>
+        <item>21.4</item>
+        <item>29</item>
+        <item>55</item>
+        <item>75</item>
+        <item>81</item>
+        <item>90</item>
+        <item>106</item>
+        <item>126</item>
+        <item>148</item>
+        <item>164</item>
+        <item>198</item>
+        <item>279</item>
+        <item>331</item>
+        <item>436</item>
+        <item>546</item>
+        <item>590</item>
+        <item>630</item>
+        <item>680</item>
+        <item>790</item>
+        <item>860</item>
+        <item>1080</item>
+        <item>1400</item>
+        <item>1650</item>
+    </array>
+
+        <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
+        <item>3</item>
+        <item>6</item>
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>700</item>
+        <item>800</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>8000</item>
+        <item>10000</item>
+        <item>13000</item>
+        <item>15000</item>
+        <item>25000</item>
+        <item>65000</item>
+        <item>100000</item>
+    </integer-array>
+
+    <integer-array name="config_screenBrighteningThresholds">
+        <item>100</item>
+    </integer-array>
+
+    <integer-array name="config_screenDarkeningThresholds">
+        <item>200</item>
+    </integer-array>
+</resources>

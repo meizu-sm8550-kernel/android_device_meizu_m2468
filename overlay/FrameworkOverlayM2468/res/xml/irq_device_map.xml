@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extracted from the Meizu 21 Note stock framework resource overlay. -->
+<irq-device-map>
+    <device name="pm8xxx_rtc_alarm">
+        <subsystem>Alarm</subsystem>
+    </device>
+    <device name="qcom_rx_wakelock">
+        <subsystem>Network_Data</subsystem>
+    </device>
+    <device name="smp2p-sleepstate">
+        <subsystem>Sensor</subsystem>
+    </device>
+    <device name="hs_uart_wakeup">
+        <subsystem>Bluetooth</subsystem>
+    </device>
+    <device name="wlan_wake_irq">
+        <subsystem>Wifi</subsystem>
+    </device>
+</irq-device-map>

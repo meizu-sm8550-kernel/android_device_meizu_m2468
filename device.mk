@@ -272,6 +272,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayM2468 \
+    FrameworkOverlayM2468 \
     TelephonyOverlayM2468
 
 # Partitions
