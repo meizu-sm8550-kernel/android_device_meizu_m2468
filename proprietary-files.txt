@@ -1648,6 +1648,19 @@ vendor/lib64/libcpion.so
 vendor/lib64/libsi.so
 vendor/lib64/libtrustedapploader.so
 
+# TrustZone
+vendor/firmware/ancap64.b00
+vendor/firmware/ancap64.b01
+vendor/firmware/ancap64.b02
+vendor/firmware/ancap64.b03
+vendor/firmware/ancap64.b04
+vendor/firmware/ancap64.b05
+vendor/firmware/ancap64.b06
+vendor/firmware/ancap64.b07
+vendor/firmware/ancap64.b08
+vendor/firmware/ancap64.mdt
+vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk
+
 # VPP
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
@@ -1751,7 +1764,6 @@ system_ext/lib64/vendor.qti.ims.datachannelservice-V1-ndk.so
 system_ext/lib64/vendor.qti.ims.datachannelservice-V2-ndk.so
 system_ext/lib64/vendor.qti.ims.datachannelservice-V3-ndk.so
 vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk
-vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk
 vendor/bin/audioadsprpcd
 vendor/bin/diag_uart_log
 vendor/bin/hdcp1prov
