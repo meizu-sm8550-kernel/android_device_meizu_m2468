@@ -1,0 +1,11 @@
+#
+# Copyright (C) 2024 The LineageOS Project
+#
+# Key layout for Meizu 21 Note touchscreen and gesture driver
+#
+
+# Goodix FOD touch event (0x272 = 626)
+key 626   WAKE
+
+# Double-tap to wake fallback
+key 143   WAKE
