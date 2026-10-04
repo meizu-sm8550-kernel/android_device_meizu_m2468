@@ -15,3 +15,8 @@ service mz_gesture_control_init /vendor/bin/mz_fp_gesture_init
     group system
     disabled
     oneshot
+
+service mz_fingerprint_hbm_daemon /vendor/bin/hw/mz_fp_hbm_daemon
+    class hal
+    user system
+    group system input

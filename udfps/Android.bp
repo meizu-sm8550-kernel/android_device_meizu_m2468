@@ -1,0 +1,7 @@
+cc_binary {
+    name: "mz_fp_hbm_daemon",
+    vendor: true,
+    relative_install_path: "hw",
+    srcs: ["mz_fp_hbm_daemon.cpp"],
+    shared_libs: ["liblog"],
+}

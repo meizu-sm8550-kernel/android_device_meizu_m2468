@@ -375,6 +375,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
+# Udfps
+PRODUCT_PACKAGES += \
+    mz_fp_hbm_daemon
+
 # Ueventd
 PRODUCT_PACKAGES += \
     ueventd.qcom.rc
