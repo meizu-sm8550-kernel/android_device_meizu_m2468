@@ -103,7 +103,10 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
-        
+
+    'vendor/lib64/anc.hal.so': blob_fixup()
+        .add_needed('libion.so'),
+
     'vendor/bin/qseecom_sample_client': blob_fixup()
         .add_needed('libion.so'),
 
