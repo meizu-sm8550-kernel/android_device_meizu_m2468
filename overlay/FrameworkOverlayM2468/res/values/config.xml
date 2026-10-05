@@ -49,12 +49,12 @@
     <integer name="config_shutdownBatteryTemperature">600</integer>
 
     <integer-array name="config_availableColorModes">
-        <item>0</item>
-        <item>1</item>
-        <item>3</item>
+        <item>260</item>
+        <item>262</item>
+        <item>261</item>
     </integer-array>
 
-    <item name="config_screenBrightnessDozeFloat" type="dimen" format="float">0.0</item>
+    <item name="config_screenBrightnessDozeFloat" type="dimen" format="float">0.0629921</item>
     <item name="config_screenBrightnessSettingDefaultFloat" type="dimen" format="float">0.484958</item>
     <item name="config_screenBrightnessSettingMaximumFloat" type="dimen" format="float">1.0</item>
     <item name="config_screenBrightnessSettingMinimumFloat" type="dimen" format="float">0.0</item>
