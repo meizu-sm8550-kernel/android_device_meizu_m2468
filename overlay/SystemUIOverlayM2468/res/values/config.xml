@@ -7,5 +7,4 @@
     <bool name="config_vibrateOnIconAnimation">true</bool>
     <bool name="doze_double_tap_proximity_check">true</bool>
     <bool name="doze_display_state_supported">true</bool>
-    <integer name="config_udfpsDeviceEntryIconLongPress">2147483647</integer>
 </resources>
