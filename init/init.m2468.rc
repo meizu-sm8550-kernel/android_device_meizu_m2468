@@ -16,7 +16,10 @@ service mz_gesture_control_init /vendor/bin/mz_fp_gesture_init
     disabled
     oneshot
 
-service mz_fingerprint_hbm_daemon /vendor/bin/hw/mz_fp_hbm_daemon
-    class hal
-    user system
-    group system input
+# A killed HAL cannot run its wrapper cleanup. Reset the panel from init as
+# well, including the restart interval before the module is loaded again.
+on property:init.svc.anc_fps=stopped
+    write /sys/kernel/display_drivers/hbm 7
+
+on property:init.svc.anc_fps=restarting
+    write /sys/kernel/display_drivers/hbm 7

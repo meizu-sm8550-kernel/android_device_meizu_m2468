@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0
+allow hal_fingerprint_default sysfs:dir search;
+allow hal_fingerprint_default vendor_sysfs_fingerprint_hbm:file rw_file_perms;
+allow hal_fingerprint_default vendor_sysfs_fingerprint_hbm_ready:file r_file_perms;

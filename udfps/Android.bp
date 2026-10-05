@@ -1,7 +1,16 @@
-cc_binary {
-    name: "mz_fp_hbm_daemon",
+// SPDX-License-Identifier: Apache-2.0
+cc_library_shared {
+    name: "jiiov.fingerprint.default",
     vendor: true,
+    compile_multilib: "64",
     relative_install_path: "hw",
-    srcs: ["mz_fp_hbm_daemon.cpp"],
-    shared_libs: ["liblog"],
+    srcs: [
+        "FingerprintModule.cpp",
+        "SysfsHbm.cpp",
+        "UdfpsHandler.cpp",
+    ],
+    header_libs: ["libhardware_headers"],
+    shared_libs: ["libdl", "liblog"],
+    cpp_std: "c++17",
+    cflags: ["-Wall", "-Wextra", "-Werror", "-fvisibility=hidden"],
 }

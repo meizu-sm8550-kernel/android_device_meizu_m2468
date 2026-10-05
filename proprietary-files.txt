@@ -842,7 +842,7 @@ vendor/lib64/libfastcvopt.so
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service-jv
 vendor/etc/init/android.hardware.biometrics.fingerprint-service-jv.rc
 vendor/etc/vintf/manifest/fingerprint-default.xml
-vendor/lib64/hw/jiiov.fingerprint.default.so
+vendor/lib64/hw/jiiov.fingerprint.default.so:vendor/lib64/hw/jiiov.fingerprint.vendor.so;FIX_SONAME
 vendor/lib64/anc.hal.so
 vendor/lib64/vendor.anc.fingerprint.extension-V1-ndk.so
 

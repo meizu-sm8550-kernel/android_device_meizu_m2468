@@ -381,7 +381,7 @@ PRODUCT_COPY_FILES += \
 
 # Udfps
 PRODUCT_PACKAGES += \
-    mz_fp_hbm_daemon
+    jiiov.fingerprint.default
 
 # Ueventd
 PRODUCT_PACKAGES += \
