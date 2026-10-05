@@ -1168,37 +1168,22 @@ vendor/etc/media_profiles_V1_0.xml
 
 # NFC
 vendor/bin/hw/android.hardware.nfc@1.2-service-tms
-vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
-vendor/etc/init/android.hardware.nfc@1.2-service-tms.rc
-vendor/etc/init/vendor.nxp.hardware.nfc@2.0-service.rc
 vendor/etc/libnfc-nci.conf
-product/etc/libnfc-nci-NXP.conf
-product/etc/libnfc-nci-STM.conf
 vendor/etc/libnfc-tms.conf
 vendor/etc/libnfc-tms_RF.conf
 vendor/etc/libnfc-tms_RF_EC2.conf
 vendor/etc/libnfc-tms_RF_GB1.conf
-system/lib64/libstatslog_nfc_tms.so
-system/lib64/nqlibstatslog_nfc.so
-vendor/lib64/nfc_nci.nqx.default.hw.so
-vendor/lib64/nfc_nci.st21nfc.st.so
-vendor/etc/libnfc-SN220_19_2MHZ.conf
-vendor/etc/libnfc-SN220_38_4MHZ.conf
-vendor/etc/libnfc-hal-st-519_mtp.conf
-vendor/etc/libnfc-hal-st.conf
-vendor/etc/libnfc-mtp-SN100.conf
-vendor/etc/libnfc-qrd-SN100.conf
-vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
-vendor/lib64/libsn100u_fw.so;FIX_SONAME
-vendor/lib64/libsn220u_fw.so;FIX_SONAME
-vendor/lib64/se_nq_extn_client.so
-vendor/lib64/vendor.tms.tmsnfc@1.0.so
-vendor/lib64/vendor.nxp.hardware.nfc@2.0.so
-vendor/lib64/tms-utils.so
-vendor/lib64/tms-cos-dl-ree.so
-vendor/lib64/tms-cos-dl-common.so
+vendor/etc/init/init.kalama.nfc.rc
+vendor/etc/init/android.hardware.nfc@1.2-service-tms.rc
+vendor/etc/vintf/manifest/android.hardware.nfc@1.2-service-tms.xml
 vendor/lib64/7816-3-T1.so
+vendor/lib64/gptms_se_api.so
 vendor/lib64/nfc_nci.thn31nfc.tms.so
+vendor/lib64/tms-cos-dl-common.so
+vendor/lib64/tms-cos-dl-ree.so
+vendor/lib64/tms-cos-dl-tee.so
+vendor/lib64/tms-utils.so
+vendor/lib64/vendor.tms.tmsnfc@1.0.so
 
 # Native public libraries
 vendor/etc/public.libraries.txt
@@ -1549,15 +1534,16 @@ vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libqcbor.so
 
 # Secure element
-vendor/bin/hw/vendor.qti.secure_element@1.2-service
-vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
-vendor/lib64/android.hardware.secure_element@1.0-impl.so
-vendor/lib64/ls_nq_client.so
-vendor/lib64/jcos_nq_client.so
+vendor/bin/hw/android.hardware.secure_element@1.2-service-tms
+vendor/etc/libese-tms.conf
+vendor/etc/init/init.kalama.se.rc
+vendor/etc/init/android.hardware.secure_element@1.2-service-tms.rc
+vendor/etc/vintf/manifest/android.hardware.secure_element@1.2-service-tms.xml
 vendor/lib64/libesepmconfig.so
 vendor/lib64/libesesbprovision.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
+vendor/lib64/vendor.tms.tmsese@1.0.so
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
@@ -1788,7 +1774,6 @@ vendor/bin/ipacm-diag
 vendor/bin/meizu_charging_helper
 vendor/bin/memtester
 vendor/bin/myftm
-vendor/bin/nqnfcinfo
 vendor/bin/pm_ioctl_app
 vendor/bin/pmic_key_reset
 vendor/bin/qguard
