@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
+// Requires the stock service pointer-callback fixup in extract-files.py.
 cc_library_shared {
     name: "jiiov.fingerprint.default",
     vendor: true,

@@ -109,6 +109,31 @@ int setActiveGroup(AncFingerprintDevice *device, uint32_t group,
   return s.original.set_active_group(device, group, path);
 }
 
+void onPointerDown(AncFingerprintDevice *device, int32_t pointerId, int32_t x,
+                   int32_t y, float minor, float major) {
+  auto &s = state();
+  std::lock_guard lock(s.calls);
+  if (device != s.device)
+    return;
+  auto touch = s.udfps.beginTouch();
+  if (!touch)
+    return;
+  FP_LOGI("Framework pointer down: id=%d", pointerId);
+  s.original.on_pointer_down(device, pointerId, x, y, minor, major);
+  if (!s.udfps.illuminate(*touch))
+    FP_LOGE("Framework TouchDown ended or HBM enable failed");
+}
+
+void onPointerUp(AncFingerprintDevice *device, int32_t pointerId) {
+  auto &s = state();
+  std::lock_guard lock(s.calls);
+  if (device != s.device)
+    return;
+  FP_LOGI("Framework pointer up: id=%d", pointerId);
+  s.udfps.endTouch();
+  s.original.on_pointer_up(device, pointerId);
+}
+
 int sendCommand(AncFingerprintDevice *device, int32_t command, int32_t arg,
                 const uint8_t *payload, uint32_t size) {
   auto &s = state();
@@ -117,21 +142,10 @@ int sendCommand(AncFingerprintDevice *device, int32_t command, int32_t arg,
     return -EINVAL;
 
   if (command == kTouchDown) {
-    auto touch = s.udfps.beginTouch();
-    if (!touch)
-      return 0;
-    const int ret =
-        s.original.send_command(device, command, arg, payload, size);
-    if (ret != 0) {
-      s.udfps.endTouch();
-      return ret;
-    }
-    // This happens before returning to FingerprintControl, which only then
-    // schedules the existing hbm_ready_status polling work item.
-    if (!s.udfps.illuminate(*touch)) {
-      FP_LOGE("TouchDown ended or HBM enable failed");
-      return -EIO;
-    }
+    // The stock /dev/input reader bypasses SystemUI's touch visibility gate.
+    // In particular, authentication remains active on the primary bouncer.
+    // Only the patched ISession::onPointerDown may start capture/illumination.
+    // Returning still lets FingerprintControl run its existing ready poller.
     return 0;
   }
 
@@ -203,7 +217,8 @@ int openDevice(const hw_module_t *, const char *id, hw_device_t **out) {
   auto *device = reinterpret_cast<AncFingerprintDevice *>(real);
   if (!device->common.close || !device->set_notify || !device->enroll ||
       !device->authenticate || !device->cancel || !device->set_active_group ||
-      !device->send_command || !device->inner) {
+      !device->send_command || !device->on_pointer_down ||
+      !device->on_pointer_up || !device->inner) {
     FP_LOGE("Incomplete ANC device function table");
     if (real->close)
       real->close(real);
@@ -222,8 +237,10 @@ int openDevice(const hw_module_t *, const char *id, hw_device_t **out) {
   device->cancel = cancel;
   device->set_active_group = setActiveGroup;
   device->send_command = sendCommand;
+  device->on_pointer_down = onPointerDown;
+  device->on_pointer_up = onPointerUp;
   *out = real;
-  FP_LOGI("JIIOV wrapper loaded; operation-gated HBM enabled");
+  FP_LOGI("JIIOV wrapper loaded; framework-gated HBM enabled");
   return 0;
 }
 

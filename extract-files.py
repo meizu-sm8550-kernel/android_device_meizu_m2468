@@ -39,6 +39,35 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    # Stock ANC AIDL V1: route SystemUI pointer events to the device callbacks.
+    # Each signature is unique in the verified Meizu 21 Note service binary.
+    # Patch the entry/logging blocks only; preserve PAC, stack and return code.
+    # The bridge also re-arms/stops FingerprintControl's one-shot ready poller.
+    'vendor/bin/hw/android.hardware.biometrics.fingerprint-service-jv': blob_fixup()
+        # onPointerDown entry @ 0xd830
+        .sig_replace(
+            'C1 FF FF 90 40 00 80 52 21 B4 3A 91 F3 03 08 AA 5C 22 00 94 00 01 00 37',
+            'F3 03 08 AA 0C 00 00 14 ' + '1F 20 03 D5 ' * 4,
+        )
+        # onPointerDown bridge @ 0xd864
+        .sig_replace(
+            '59 22 00 94 C1 FF FF B0 C4 FF FF 90 F4 03 00 AA',
+            '69 00 00 90 29 1D 40 F9 E9 FE FF B4 20 05 40 F9 A0 FE FF B4 '
+            '09 6C 40 F9 69 FE FF B4 20 01 3F D6 99 16 00 94 F0 FF FF 17 '
+            + '1F 20 03 D5 ' * 12,
+        )
+        # onPointerUp entry @ 0xd8d0
+        .sig_replace(
+            'C1 FF FF 90 40 00 80 52 21 B4 3A 91 F3 03 08 AA 34 22 00 94 00 01 00 37',
+            'F3 03 08 AA 0C 00 00 14 ' + '1F 20 03 D5 ' * 4,
+        )
+        # onPointerUp bridge @ 0xd904
+        .sig_replace(
+            '31 22 00 94 C1 FF FF B0 C4 FF FF 90 F4 03 00 AA',
+            '69 00 00 90 29 1D 40 F9 E9 FE FF B4 20 05 40 F9 A0 FE FF B4 '
+            '09 70 40 F9 69 FE FF B4 20 01 3F D6 C1 18 00 94 F0 FF FF 17 '
+            + '1F 20 03 D5 ' * 12,
+        ),
     (
         'product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml',
         'product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml',
