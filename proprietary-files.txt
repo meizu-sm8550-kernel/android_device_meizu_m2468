@@ -1958,7 +1958,6 @@ vendor/etc/vintf/manifest/android.hardware.drm-service.xml
 vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
 vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/manifest_xingji_qsee_store_default.xml
-vendor/etc/vintf/manifest/secure_element-service.xml
 vendor/etc/vintf/manifest/vendor.meizu.hardware.fido@2.0-service.xml
 vendor/etc/vintf/manifest/vendor.meizu.hardware.ifaa@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.meizu.hardware.meizu_charging@1.0-service.xml
