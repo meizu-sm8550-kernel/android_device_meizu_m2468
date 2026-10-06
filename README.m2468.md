@@ -1,3 +1,7 @@
+2026-10-06 相机供应者接入：启用现有 PM8008 chip/LDO 驱动并显式第二阶段加载，补齐 Note 原 DT 的相机电源供应者。相机 master 等待这些组件，因而此前未创建 `/sys/kernel/camera/subparts_info`，CamX 在初始化时中止。原 DT、电压和 camera 驱动保持。
+
+本地仅增量编译 PM8008，通过34项导入CRC与CFI/ThinLTO；新选择388项，在既有HBM387上只增加供应者。候选未加载，provider、传感器枚举、预览、拍照及录像均待用户更新镜像后验证。
+
 # Meizu 21 Note (M2468) · lineage-23.2
 
 M2468 设备配置，使用源码内核、配套外置驱动与 Note DTS 构建。

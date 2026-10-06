@@ -4,7 +4,7 @@
   "upstream": "https://cnb.cool/AstralSpun/android_device_meizu_m2468",
   "upstream_commit": "b82127689b3f7aa7a09c51b3af8b8a3140eeaa17",
   "source_only": true,
-  "local_module_inventory": 387,
+  "local_module_inventory": 388,
   "runtime_validated": false,
   "local_baseline_module_inventory": 386,
   "fingerprint_candidate": {
@@ -13,5 +13,14 @@
     "runtime_validated": false,
     "wlan_coexistence": "Note selects CONFIG_WLAN_DISABLE_CESIUM_NETLINK=y; no load-order dependency",
     "stock_binary_distributed": false
+  },
+  "camera_supplier_candidate": {
+    "existing_driver": "drivers/regulator/qcom_pm8008-regulator.c",
+    "config": "CONFIG_REGULATOR_QCOM_PM8008=m",
+    "source_driver_modified": false,
+    "dt_modified": false,
+    "local_build_verified": true,
+    "import_crcs_verified": 34,
+    "runtime_validated": false
   }
 }
