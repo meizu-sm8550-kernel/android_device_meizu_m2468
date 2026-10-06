@@ -69,7 +69,7 @@ BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 
 BOARD_KERNEL_CMDLINE := \
-    qcom_geni_serial.con_enabled=1 \
+    qcom_geni_serial.con_enabled=0 \
     nosoftlockup \
     page_poison=1 \
     sysrq_always_enabled
