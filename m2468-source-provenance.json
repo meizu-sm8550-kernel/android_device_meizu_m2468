@@ -4,6 +4,14 @@
   "upstream": "https://cnb.cool/AstralSpun/android_device_meizu_m2468",
   "upstream_commit": "b82127689b3f7aa7a09c51b3af8b8a3140eeaa17",
   "source_only": true,
-  "local_module_inventory": 385,
-  "runtime_validated": false
+  "local_module_inventory": 387,
+  "runtime_validated": false,
+  "local_baseline_module_inventory": 386,
+  "fingerprint_candidate": {
+    "source": "M2468 stock ABI-compatible source reconstruction",
+    "compiled_against": "Android13 / Linux5.15.211 / SM8550",
+    "runtime_validated": false,
+    "wlan_coexistence": "M2468 selects CONFIG_WLAN_DISABLE_CESIUM_NETLINK=y; no load-order dependency",
+    "stock_binary_distributed": false
+  }
 }

@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: Apache-2.0
+type vendor_jiiov_fp_device, dev_type;
+
+allow hal_fingerprint_default vendor_jiiov_fp_device:chr_file { getattr open read write ioctl };
+allowxperm hal_fingerprint_default vendor_jiiov_fp_device:chr_file ioctl {
+    0x6100-0x6108
+    0x610b 0x610c
+    0x610e-0x6110
+    0x6112 0x6113
+};
+
+# JIIOV protocol 30 maps to the generic netlink_socket SELinux class.
+allow hal_fingerprint_default self:netlink_socket { create bind read write };
