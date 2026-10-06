@@ -6,6 +6,7 @@ TARGET_KERNEL_CONFIG := gki_defconfig vendor/kalama_GKI.config vendor/m2468_GKI.
 TARGET_KERNEL_ADDITIONAL_FLAGS += M2468_DTBS=1 LLVM=1 LLVM_IAS=1 KCFLAGS=-D__ANDROID_COMMON_KERNEL__
 TARGET_KERNEL_ADDITIONAL_FLAGS += TARGET_BOARD_PLATFORM=kalama
 TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_TOUCHSCREEN_NT36XXX_I2C=n CONFIG_TOUCHSCREEN_ATMEL_MXT=n CONFIG_TOUCHSCREEN_DUMMY=n
+TARGET_KERNEL_ADDITIONAL_FLAGS += CONFIG_WLAN_DISABLE_CESIUM_NETLINK=y
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/meizu/sm8550-modules
 TARGET_KERNEL_EXT_MODULES := qcom/opensource/mmrm-driver \
     qcom/opensource/securemsm-kernel \
@@ -30,7 +31,8 @@ TARGET_KERNEL_EXT_MODULES := qcom/opensource/mmrm-driver \
     qcom/opensource/touch-drivers \
     qcom/opensource/wlan/platform \
     qcom/opensource/wlan/qcacld-3.0/.kiwi_v2 \
-    qcom/opensource/bt-kernel
+    qcom/opensource/bt-kernel \
+    qcom/opensource/jiiov-fingerprint
 
 # Source image/module selection consumed by official LineageOS 23.2.
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := false

@@ -121,6 +121,7 @@ nb7vpq904m.ko
 pm8941-pwrkey.ko
 qti_battery_charger.ko
 qcom-hv-haptics.ko
+jiiov_fingerprint.ko
 i2c-msm-geni.ko
 i3c-master-msm-geni.ko
 qcom_ipc_lite.ko
