@@ -17,6 +17,7 @@ cnss_prealloc.ko
 cnss_plat_ipc_qmi_svc.ko
 cnss2.ko
 cnss_nl.ko
+cs35l43_dlkm.ko
 extcon-ktm5030.ko
 extcon-lt8711uxe2.ko
 gsim.ko
