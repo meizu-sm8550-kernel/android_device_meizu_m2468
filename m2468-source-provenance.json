@@ -1,0 +1,9 @@
+{
+  "device": "Meizu 21 Note / M2468",
+  "rom_branch": "lineage-23.2",
+  "upstream": "https://cnb.cool/AstralSpun/android_device_meizu_m2468",
+  "upstream_commit": "b82127689b3f7aa7a09c51b3af8b8a3140eeaa17",
+  "source_only": true,
+  "local_module_inventory": 385,
+  "runtime_validated": false
+}
