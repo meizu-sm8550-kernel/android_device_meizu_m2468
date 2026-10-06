@@ -1,4 +1,5 @@
 qcom-i2c-pmic.ko
+qcom_pm8008-regulator.ko
 msm_sysstats.ko
 msm_show_resume_irq.ko
 qcom_smd.ko
