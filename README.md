@@ -1,17 +1,15 @@
-# Meizu 21 Note (M2468) · lineage-23.2
+# m2468 设备构建配置
 
-M2468 设备配置，使用源码内核、配套外置驱动与 M2468 DTS 构建。
+M2468 的 Android 设备配置，负责从源码构建内核、外置驱动和 DT，并设置模块加载顺序与指纹 HAL 权限。
 
-通过 [kernel_manifest](https://github.com/meizu-sm8550-kernel/kernel_manifest) 的分支跟随清单同步；不需要人工套补丁。发布分支为 `lineage-23.2`，不继承 ROM 分支，不固定项目 SHA，也不移除其他清单项目。
+本仓库属于 **meizu-sm8550-kernel**，**当前仅支持 m2468（魅族 21 Note）**。组织与内核仓库名称中的 `sm8550` 表示平台，不表示支持其它魅族 SM8550 设备；M2481（魅族 21 Pro）也不在本适配范围内。
 
-[公开上游](https://cnb.cool/AstralSpun/android_device_meizu_m2468)，基线 `b82127689b3f7aa7a09c51b3af8b8a3140eeaa17`；保留原有许可证及版权声明。内核基线保持 SM8550 / Kalama / Android13 Linux5.15。ROM 构建规则参考官方 LineageOS23.2，用户运行的是24.0 / Android17，不能称为官方23.2整ROM验证。
+发布分支为 `lineage-23.2`。使用 [kernel_manifest](https://github.com/meizu-sm8550-kernel/kernel_manifest) 同步四个配套源码仓库，并按其中的构建说明编译。清单跟随该分支，`revisions.lock.json` 只记录发布版本。
 
-既有源码基线已进入系统；用户确认ESD黑闪、bark误按键、Wi-Fi基本使用和启动提速。新的 JIIOV 候选仅完成源码接口回归、配套本地编译/CRC检查与加载配置，尚未加载到设备，也未验证probe、HAL初始化、TEE/校准、HBM、录入、匹配或解锁。
+设备路径、配置和自有代码标识使用 `m2468` / `M2468`。提交采用“子系统前缀 + 首字母大写的动作描述”，每条提交聚焦一项修改，见 [提交约定](https://github.com/meizu-sm8550-kernel/kernel_manifest/blob/lineage-23.2/CONTRIBUTING.md)。原厂 DT 属性、固件名和运行时接口保持兼容。
 
-本地原386模块基线保留；选择库存增加 `jiiov_fingerprint`，加上既有bark与WLAN替换，共387项。基础内核和M2468 DT不变，不混用stock ko、不伪造CRC/vermagic、不关闭CFI/MODVERSIONS。
+上游基线为 `b82127689b3f7aa7a09c51b3af8b8a3140eeaa17`，来源和许可信息见 [m2468-source-provenance.json](m2468-source-provenance.json)。保留上游许可证和版权声明。
 
-JIIOV保持M2468原DT参数及精确ioctl、netlink30/port100接口。配套M2468构建选择 `CONFIG_WLAN_DISABLE_CESIUM_NETLINK=y`，只释放无收发逻辑的Cesium占位socket；其它WLAN诊断通道保留。新增两模块的实机共存和Wi-Fi回归仍需验证。
+本次整理只调整提交历史、内部命名和文档。此前编译与设备反馈的范围见 [历史适配记录](docs/m2468-bringup-history.md)；未因本次整理新增整 ROM 编译或实机验证结论。各项主机回归不能代替外设运行验证。
 
-指纹节点使用专用SELinux类型和受限ioctl规则；离线当前ROM策略对比无新增neverallow冲突，但基线策略存在两条冲突，不代表完整ROM策略编译通过。
-
-完整显示/AOD、音频播放录音、相机、充电、温控及其它OEM行为仍有未验证内容。源码存在和编译成功不是功能恢复。
+`BoardConfig.mk` 集中配置源码内核、模块及 DTBO 构建。OTA 兼容别名 `meizu21Note` 保留；它是既有设备识别接口，不用作新增适配代码的代号。
